@@ -1,0 +1,28 @@
+:root {
+  --items-per-row: 3;
+  --gap: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--container-width);
+  gap: var(--gap);
+}
+
+.flex-block {
+  height: var(--block-height);
+  flex: 0 0 calc((100% / var(--items-per-row)) - var(--gap));
+  max-width: calc((100% / var(--items-per-row)) - var(--gap));
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  padding: var(--gap);
+}
+
+.flex-block img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
